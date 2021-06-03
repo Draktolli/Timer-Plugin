@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>org.example.ttt</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Custom Notification Group" displayType="BALLOON" key="notification.group.name"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="myTimer" class="myTimer" text="Timer Plugin" description="Timer for you)">
+            <override-text place="MainMenu" text="Timer Plugin"/>
+            <keyboard-shortcut first-keystroke="control A" second-keystroke="alt A" keymap="$default"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
